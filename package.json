@@ -1,0 +1,24 @@
+{
+  "name": "abcat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jest.config.js",
+  "scripts": {
+    "build:backend": "cd backend && npm i &&  npm run build",
+    "build:ui": "cd ui && npm i && npm run build",
+    "build": "run-p build:ui build:backend",
+    "start": "cd backend &&  npm start",
+    "deploy": "now --public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/Arkonix/abcat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/Arkonix/abcat#readme",
+  "dependencies": {
+    "now": "^11.4.6",
+    "npm-run-all": "^4.1.3"
+  }
+}

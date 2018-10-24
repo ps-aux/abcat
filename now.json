@@ -1,0 +1,7 @@
+{
+  "env": {
+    "MONGO_URL": "@abcat-mongo-url",
+    "MONGO_DB_NAME": "abcat",
+    "LOG_LEVEL": "debug"
+  }
+}

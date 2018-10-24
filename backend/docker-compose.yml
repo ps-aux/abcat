@@ -1,0 +1,23 @@
+version: '3'
+services:
+  mongo:
+    image: mongo:4.1.4-xenial
+    ports:
+    - 27018:27017
+    command: mongod --replSet rs0
+  #  initiate-replset:
+  #    image: mongo:4.1.4-xenial
+  #    command: mongo --host mongo --eval 'rs.initiate()'
+  mongo-express:
+    image: mongo-express
+    environment:
+    - ME_CONFIG_MONGODB_SERVER=mongo
+    - ME_CONFIG_MONGODB_PORT=27017
+    - ME_CONFIG_MONGODB_ENABLE_ADMIN=true
+    - ME_CONFIG_MONGODB_AUTH_DATABASE=admin
+    depends_on:
+    - mongo
+    ports:
+    - "8888:8081"
+
+

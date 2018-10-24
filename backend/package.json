@@ -1,0 +1,57 @@
+{
+  "name": "abcat-backend",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "PUBLIC_DIR=../../ui/build node -r dotenv/config build/server.js",
+    "data:seed": "babel-node -r node_modules/dotenv/config  data/generate.js",
+    "dev": "nodemon --exec babel-node -r node_modules/dotenv/config src/server.js",
+    "dev:mongo": "docker-compose up",
+    "build": "babel src -d build",
+    "test": "jest --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "chance": "^1.0.16",
+    "express": "^4.16.4",
+    "faker": "^4.1.0",
+    "mongodb": "^3.1.8",
+    "mongoose": "^5.3.3",
+    "node-petname": "^1.0.1",
+    "pino": "^5.7.0",
+    "ramda": "^0.25.0",
+    "rxjs": "^6.3.2",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/node": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-stage-2": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "dotenv": "^5.0.1",
+    "eslint": "^5.6.0",
+    "eslint-config-react-app": "^3.0.4",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^23.6.0",
+    "jest-extended": "^0.11.0",
+    "nodemon": "^1.18.4",
+    "now": "^11.4.6",
+    "pino-pretty": "^2.2.2"
+  },
+  "config": {
+    "registry": "abspro"
+  }
+}

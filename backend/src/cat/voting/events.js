@@ -1,0 +1,1 @@
+export const VOTE_ADDED = 'voting/vote-added'
